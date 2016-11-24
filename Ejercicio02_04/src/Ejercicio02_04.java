@@ -9,26 +9,29 @@ public class Ejercicio02_04 {
 		Scanner teclado=new Scanner(System.in);
 		String frase;
 		char l='a';
-		int letra='Z';
 		int contador=0;
-		int cmayu=0;
-		int cmin=0;
-		
-		
+		int cMayu=0;
+		int cMin=0;
+
+
 		System.out.print("Introduce una frase que tenga como maximo 80 caracteres: ");
-		frase=teclado.next();
-		System.out.print(letra);
-		
+		frase=teclado.nextLine();
+
+
 		while (contador < frase.length()){
 			l=frase.charAt(contador);
-			
-			if(65 <= l && l <=90)
-				cmayu++;
-			else
-				cmin++;
-			
+
+			if(65 <= l && l <=96){
+				cMayu++;
+			}
+			else if (97 <= l && l <=122) {
+				cMin++;
+			}
+
+
+			contador++;
 		}
-		System.out.print("");
+		System.out.print("Hay " + cMin + " minusculas y " + cMayu + " mayusculas.");
 	}
 
 }
